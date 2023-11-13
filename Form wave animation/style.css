@@ -1,0 +1,161 @@
+:root {
+   --white: #fff;
+   --pink: #89253e;
+   --blue: #3a6186;
+   --black: rgba(0, 0, 0, .5);
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   font-size: 2rem;
+   font-weight: 400;
+   color: var(--white);
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   background: linear-gradient(to right, var(--blue), var(--pink));
+   overflow-x: hidden;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   max-width: 50rem;
+   width: 90vw;
+   padding: 5rem 3rem;
+   background-color: var(--black);
+   border-radius: 5px;
+}
+
+.heading {
+   margin-bottom: 5rem;
+   font-size: 6rem;
+   font-weight: 100;
+   letter-spacing: 1px;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+label {
+   position: relative;
+   top: -3rem;
+   left: 1rem;
+   margin-bottom: 2.5rem;
+}
+
+input {
+   padding: 1rem;
+   font-size: 2.5rem;
+   color: var(--white);
+   background-color: transparent;
+   border: none;
+   border-bottom: 1px solid var(--white);
+   outline: none;
+   transition: all .3s;
+}
+
+input:focus {
+   border-bottom: 1px solid var(--pink);
+}
+
+label span {
+   display: inline-block;
+   transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .3s;
+}
+
+input:focus+label span {
+   transform: translateY(-4rem);
+}
+
+.btn {
+   margin-top: 2rem;
+   padding: 2rem;
+   font-size: 2rem;
+   border: none;
+   border-radius: 5px;
+   outline: none;
+   transition: all .3s;
+   cursor: pointer;
+}
+
+.btn:hover {
+   color: var(--white);
+   background-color: var(--pink);
+}
+
+.btn:active {
+   color: var(--white);
+   background-color: var(--pink);
+   transform: scale(.99);
+}
+
+.text {
+   margin-top: 4rem;
+}
+
+.link {
+   color: var(--pink);
+   text-decoration: none;
+}
+
+@media screen and (max-width: 50em) {
+   body {
+      font-size: 1.7rem;
+   }
+
+   .container {
+      width: 100vw;
+      height: 100vh;
+   }
+
+   .form {
+      width: 90vw;
+      padding: 3rem;
+   }
+
+   .heading {
+      margin-bottom: 4rem;
+      font-size: 4rem;
+   }
+
+   label {
+      top: -2.5rem;
+      left: .5rem;
+      margin-bottom: 2rem;
+   }
+
+   input {
+      padding: .5rem;
+   }
+
+   input:focus+label span {
+      transform: translateY(-3rem);
+   }
+
+   .btn {
+      margin-top: 2rem;
+      padding: 1.5rem;
+   }
+
+   .text {
+      margin-top: 3rem;
+   }
+}

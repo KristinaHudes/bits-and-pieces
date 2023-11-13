@@ -1,0 +1,106 @@
+:root {
+   --white: #fff;
+   --red: #8e0e00;
+   --black: #1f1c18;
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   height: auto;
+   font-family: 'Roboto', sans-serif;
+   color: var(--white);
+   background: linear-gradient(to bottom, var(--red), var(--black));
+}
+
+.container {
+   display: flex;
+   gap: 7rem;
+   padding: 2rem;
+}
+
+.counter__container {
+   display: flex;
+   flex-direction: column;
+   row-gap: 1rem;
+   width: 25rem;
+   line-height: 1.5;
+   text-align: center;
+}
+
+.counter__icon {
+   font-size: 4rem;
+   fill: var(--white);
+   transition: all .2s;
+}
+
+.followers {
+   display: block;
+   font-size: 7rem;
+   font-weight: 400;
+}
+
+.counter__subscribers {
+   font-size: 2rem;
+   font-weight: 300;
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+
+a {
+   text-decoration: none;
+}
+
+a:hover .counter__icon {
+   transform: scale(1.1);
+}
+
+a:active .counter__icon {
+   transform: scale(0.99);
+}
+
+@media screen and (orientation: portrait) {
+   .container {
+      flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 37.5em) {
+   .container {
+      flex-direction: column;
+      gap: 5rem;
+   }
+
+   .counter__container {
+      row-gap: 0;
+      width: 18rem;
+      line-height: 1.2;
+   }
+
+   .counter__icon {
+      font-size: 2.5rem;
+   }
+
+   .followers {
+      font-size: 4rem;
+   }
+
+   .counter__subscribers {
+      font-size: 1.5rem;
+   }
+}

@@ -1,0 +1,106 @@
+:root {
+   --white: #fff;
+   --red: #bd3f32;
+   --pink: #cb356b;
+   --black: #000;
+}
+
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-family: 'Roboto', sans-serif;
+   background: linear-gradient(-45deg, var(--pink), var(--red));
+   overflow: hidden;
+}
+
+.container {
+   position: relative;
+   display: flex;
+   width: 5.5rem;
+   height: 5.5rem;
+   color: var(--black);
+   background-color: var(--white);
+   border-radius: 3px;
+   overflow: hidden;
+   transition: all ease-in .3s;
+}
+
+.input {
+   width: 0%;
+   height: 100%;
+   padding: 1.5rem;
+   font-size: 2rem;
+   border: none;
+   outline: none;
+   transition: all ease-in .3s;
+}
+
+.container--active {
+   width: 30vw;
+}
+
+.container--active .input {
+   width: calc(100% - 5.5rem);
+}
+
+.btn {
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 5.5rem;
+   height: 100%;
+   padding: 1.5rem;
+   font-size: 1.5rem;
+   background-color: var(--white);
+   border: none;
+   outline: none;
+   cursor: pointer;
+}
+
+@media screen and (max-width: 50em),
+(orientation: portrait) {
+
+   .container {
+      width: 5rem;
+      height: 5rem;
+   }
+
+   .input {
+      padding: 1rem;
+      font-size: 1.7rem;
+   }
+
+   .container--active {
+      width: 90vw;
+   }
+
+   .container--active .input {
+      width: calc(100% - 5rem);
+   }
+
+   .btn {
+      width: 5rem;
+      padding: 1rem;
+      font-size: 1.5rem;
+   }
+
+}

@@ -1,0 +1,168 @@
+:root {
+   --white: #fff;
+   --lilac: #928dab;
+   --violet: #1f1c2c;
+   --gray: rgba(99, 99, 99, 0.2);
+   --black: #000;
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.6rem;
+   font-weight: 400;
+   color: var(--black);
+   background: linear-gradient(to bottom, var(--lilac), var(--violet));
+}
+
+.container {
+   position: relative;
+   display: flex;
+   align-items: center;
+   width: 7rem;
+   height: 7rem;
+   background-color: var(--white);
+   box-shadow: var(--gray) 0px 2px 8px 0px;
+   border-radius: 3px;
+   overflow: hidden;
+   transition: all .9s;
+}
+
+.container.active {
+   max-width: 40vw;
+   width: 40rem;
+}
+
+.nav {
+   display: flex;
+   align-items: center;
+   width: 0%;
+   height: 100%;
+   padding: 3rem;
+   color: var(--black);
+}
+
+.active .nav {
+   width: calc(100% - 7rem);
+}
+
+.nav__list {
+   display: flex;
+   column-gap: 2rem;
+   list-style: none;
+}
+
+.nav__link {
+   display: inline-block;
+   color: var(--black);
+   text-decoration: none;
+   transition: all .9s;
+}
+
+.active .nav .nav__link {
+   transform: rotateY(360deg);
+}
+
+.btn {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 7rem;
+   height: 100%;
+   padding: 1.5rem;
+   font-size: 1.5rem;
+   background-color: var(--white);
+   border: none;
+   outline: none;
+   cursor: pointer;
+}
+
+.btn span {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   display: inline-block;
+   width: 40%;
+   height: 1px;
+   background-color: var(--black);
+   transition: all .9s;
+}
+
+.btn .upper {
+   transform: translateX(-50%) rotate(45deg);
+}
+
+.btn .lower {
+   transform: translateX(-50%) rotate(-45deg);
+}
+
+.active .btn .upper {
+   top: 40%;
+   transform: translate(-50%, 100%) rotate(-360deg);
+}
+
+.active .btn .lower {
+   transform: translate(-50%, 400%) rotate(360deg);
+}
+
+@media screen and (max-width: 50em),
+(orientation: portrait) {
+
+   .container {
+      width: 5rem;
+      height: 5rem;
+   }
+
+   .container.active {
+      max-width: 90vw;
+      width: 90vw;
+   }
+
+   .nav {
+      padding: 1.5rem;
+   }
+
+   .active .nav {
+      width: calc(100% - 5rem);
+   }
+
+   .btn {
+      width: 5rem;
+      padding: 1rem;
+   }
+
+}
+
+@media screen and (max-width: 22.4em) {
+   body {
+      font-size: 1.3rem;
+   }
+
+   .container.active {
+      width: 90vw;
+   }
+
+   .nav {
+      padding: 1rem;
+   }
+
+   .nav__list {
+      column-gap: 1rem;
+   }
+}

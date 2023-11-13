@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating menu</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/png" href="../assets/favicon.ico" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/0f020e0172.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <i class="fa-solid fa-bars fa-2xl"></i>
+      <i class="fa-solid fa-xmark fa-2xl"></i>
+    </header>
+    <div class="container">
+      <main class="main contact">
+        <h1 class="heading-1">Contact us</h1>
+        <ul class="contact__list">
+          <li class="contact__item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:12345678" class="contact__link">(1) 234 56 78</a>
+          </li>
+          <li class="contact__item">
+            <i class="fa-solid fa-at"></i>
+            <a href="mailto:best-of-the-best@gmail.com" class="contact__link"
+              >best-of-the-best@gmail.com</a
+            >
+          </li>
+          <li class="contact__item">
+            <i class="fa-solid fa-globe"></i>
+            <a
+              href="www.best-of-the-best.com"
+              class="contact__link"
+              class="contact__link"
+              >www.best-of-the-best.com</a
+            >
+          </li>
+        </ul>
+
+        <picture class="img__wrapper">
+          <img src="../assets/contact.jpg" alt="Airport" />
+        </picture>
+      </main>
+    </div>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <i class="fa-solid fa-house-chimney"></i>
+          <a href="../index.html" class="nav__link">Home</a>
+        </li>
+        <li class="nav__item">
+          <i class="fa-solid fa-user"></i>
+          <a href="about.html" class="nav__link">About</a>
+        </li>
+        <li class="nav__item nav__item--active">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="#" class="nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

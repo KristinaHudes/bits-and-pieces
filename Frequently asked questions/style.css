@@ -1,0 +1,176 @@
+:root {
+   --offwhite: rgb(246, 232, 223);
+   --offwhite-2: rgb(250, 247, 245);
+   --orangered: rgb(255, 70, 18);
+   --gray: rgb(51, 51, 51);
+   --gray-rgba: rgba(51, 51, 51, 0.9);
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   font-family: 'Inter', sans-serif;
+   font-size: 1.6rem;
+   font-weight: 600;
+   color: var(--gray-rgba);
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   row-gap: 7rem;
+   width: 100vw;
+   min-height: 100vh;
+   margin: 6rem 0;
+}
+
+.heading-box {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   row-gap: 3rem;
+   width: 100%;
+   padding: 5rem 0;
+   color: var(--gray);
+   background-color: var(--offwhite);
+}
+
+.heading-1 {
+   font-size: 3.4rem;
+}
+
+.heading-2 {
+   font-size: 1.6rem;
+}
+
+.content {
+   max-width: 70rem;
+   width: 50vw;
+   display: flex;
+   flex-direction: column;
+   row-gap: 2rem;
+}
+
+.question-block {
+   width: 100%;
+   height: auto;
+   letter-spacing: 1px;
+   line-height: 1.5;
+   background-color: var(--offwhite-2);
+   border-radius: 3px;
+   cursor: pointer;
+}
+
+.question {
+   position: relative;
+   display: flex;
+   align-items: center;
+   column-gap: 2rem;
+   padding: 3rem;
+   padding-right: 6rem;
+}
+
+.question::before,
+.question::after {
+   content: '\002B';
+   position: absolute;
+   right: 4rem;
+   font-family: 'Font Awesome 5 Free';
+   font-size: 2em;
+   font-weight: 400;
+   color: var(--orangered);
+}
+
+.question::after {
+   content: '\2012';
+   display: none;
+   top: 50%;
+   transform: translateY(-56%);
+}
+
+.answer {
+   display: none;
+   padding: 3rem;
+   padding-top: 1rem;
+}
+
+.answer>p:not(:last-child) {
+   padding-bottom: 2rem;
+}
+
+.question-block.active>.answer {
+   display: block;
+}
+
+.question-block.active>.question::before {
+   display: none;
+}
+
+.question-block.active>.question::after {
+   display: block;
+}
+
+.answer-link {
+   text-decoration: none;
+   color: var(--orangered);
+}
+
+@media screen and (max-width: 63em) {
+   body {
+      font-size: 1.3rem;
+   }
+
+   .container {
+      row-gap: 2rem;
+      margin: 2rem 0;
+   }
+
+   .heading-box {
+      row-gap: 2rem;
+      padding: 3rem 0;
+   }
+
+   .heading-1 {
+      font-size: 3rem;
+   }
+
+   .heading-2 {
+      font-size: 1.4rem;
+   }
+
+   .content {
+      width: 85vw;
+      row-gap: 1.5rem;
+   }
+
+   .question {
+      padding: 2rem;
+      padding-right: 5rem;
+   }
+
+   .question::before,
+   .question::after {
+      right: 2.5rem;
+   }
+
+   .answer {
+      padding: 2rem;
+      padding-top: 0;
+   }
+
+   .answer>p:not(:last-child) {
+      padding-bottom: 1rem;
+   }
+}

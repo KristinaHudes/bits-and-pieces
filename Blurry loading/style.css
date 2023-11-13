@@ -1,0 +1,44 @@
+:root {
+   --white: #fff;
+   --black: rgba(0, 0, 0, .8)
+}
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+   font-family: 'Roboto', sans-serif;
+   font-size: 4rem;
+   color: var(--white);
+}
+
+.container {
+   background: url('assets/cover.jpg') center / cover no-repeat;
+   backdrop-filter: blur(4rem);
+}
+
+.percent {
+   text-shadow: 1px 1px 5px var(--black), -1px -1px 5px var(--black);
+   opacity: 1;
+}
+
+@media screen and (orientation: portrait) and (max-width: 37.5em) {
+   .container {
+      background: url('assets/cover-mobile.jpg') center / cover no-repeat;
+   }
+}
