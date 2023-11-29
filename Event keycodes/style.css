@@ -33,7 +33,7 @@ body {
    justify-content: center;
    align-items: center;
    width: 100vw;
-   min-height: 100vh;
+   min-height: 100dvh;
    padding: 2rem;
    background-image: linear-gradient(-45deg, var(--brown), var(--offwhite-1), var(--offwhite-2), var(--offwhite-3));
 }

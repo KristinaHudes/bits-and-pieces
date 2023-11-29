@@ -21,7 +21,7 @@ body {
    justify-content: center;
    align-items: center;
    width: 100vw;
-   height: 100vh;
+   height: 100dvh;
    font-family: 'Roboto', sans-serif;
    font-size: 4rem;
    color: var(--white);

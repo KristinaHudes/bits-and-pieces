@@ -23,7 +23,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 100vh;
+   height: 100dvh;
    font-family: 'Roboto', sans-serif;
    font-size: 1.6rem;
    font-weight: 400;
