@@ -39,3 +39,7 @@ The collection includes the following components (each with accompanying GIFs to
 - **HTML**
 - **CSS**
 - **JavaScript**
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
